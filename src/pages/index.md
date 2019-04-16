@@ -1,19 +1,21 @@
 ---
 templateKey: index-page
-title: Заголовок красив
-image: /img/home-jumbotron.jpg
-heading: Заголовок красив
-subheading: Подзаголовок вполне сносный
+slide:
+  image: /img/home-jumbotron.jpg
+  heading: Заголовок красив
+  subheading: Подзаголовок вполне сносный
+  imageHeight: 100vh
 mainpitch:
   title: Почему мы?
   description: >
     На очевидный вопрос - очевидный ответ - никто, кроме нас, не решит эту задачу с таой самоотдачей и экспертизой.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 intro:
+  heading: What we offer
+  description: >
+    Kaldi is the ultimate spot for coffee lovers who want to learn about their
+    java’s origin and support the farmers that grew it. We take coffee
+    production, roasting and brewing seriously and we’re glad to pass that
+    knowledge to anyone. This is an edit via identity...
   blurbs:
     - image: /img/coffee.png
       text: >
@@ -42,12 +44,6 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
 main:
   heading: Great coffee with no compromises
   description: >
