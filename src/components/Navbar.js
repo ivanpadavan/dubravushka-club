@@ -12,7 +12,9 @@ const Navbar = class extends React.Component {
       navBarActiveClass: "",
       navBarTopClass: "on-top",
     };
+  }
 
+  componentDidMount() {
     fromEvent(document, 'scroll').pipe(
         map(() => document.body.getBoundingClientRect().y === 0),
         distinctUntilChanged(),
