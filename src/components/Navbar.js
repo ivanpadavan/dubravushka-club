@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../img/logo.svg";
+import Logo from "../img/inline/logo.svg";
 import {fromEvent} from "rxjs";
-import {map, tap, distinctUntilChanged} from "rxjs/operators";
+import {map, distinctUntilChanged} from "rxjs/operators";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+              <Logo></Logo>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -69,19 +69,16 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-end has-text-right">
               <Link className="navbar-item" to="/about">
-                About
+                О нас
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Услуги
               </Link>
               <Link className="navbar-item" to="/blog">
-                Blog
+                Новости
               </Link>
               <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+                Контакты
               </Link>
             </div>
           </div>
