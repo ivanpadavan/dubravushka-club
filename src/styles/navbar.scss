@@ -1,0 +1,26 @@
+.navbar {
+  @extend .is-fixed-top;
+  @extend .is-white;
+
+  &, .navbar * {
+    transition: all .3s ease-in;
+  }
+
+  .navbar-item {
+    text-transform: uppercase;
+    font-weight: 700;
+
+    .icon {
+      color: $primary
+    }
+  }
+
+  .navbar-menu {
+    box-shadow: none !important;
+    background-color: transparent!important;
+  }
+}
+.on-top:not(.is-active) {
+  @extend .is-dark;
+  background-color: transparent!important;
+}
