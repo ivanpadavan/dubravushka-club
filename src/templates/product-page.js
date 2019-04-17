@@ -6,10 +6,10 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import TopSlide from "../components/TopSlide";
 
 export const ProductPageTemplate = ({
-  image,
-  title,
+  slide,
   heading,
   description,
   intro,
@@ -19,26 +19,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
-        {title}
-      </h2>
-    </div>
+    <TopSlide { ...slide }></TopSlide>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -134,8 +115,7 @@ const ProductPage = ({ data }) => {
   return (
     <Layout>
       <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
+        slide={frontmatter.slide}
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -162,13 +142,17 @@ export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        slide {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
+          heading
+          subheading
+          imageHeight
         }
         heading
         description
