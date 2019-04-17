@@ -9,13 +9,11 @@ import TopSlide from '../components/TopSlide'
 
 export const IndexPageTemplate = ({
   slide,
-  title,
   mainpitch,
-  description,
   intro,
 }) => (
   <div>
-    <TopSlide image={slide.image} heading={slide.heading} subheading={slide.subheading} imageHeight={slide.imageHeight}></TopSlide>
+    <TopSlide { ...slide }></TopSlide>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -66,13 +64,15 @@ export const IndexPageTemplate = ({
   </div>
 )
 
+export const slidePropTypes = PropTypes.shape({
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      heading: PropTypes.string,
+      subheading: PropTypes.string,
+      imageHeight: PropTypes.string,
+    });
+
 IndexPageTemplate.propTypes = {
-  slide: PropTypes.shape({
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    heading: PropTypes.string,
-    subheading: PropTypes.string,
-    imageHeight: PropTypes.string,
-  }),
+  slide: slidePropTypes,
   mainpitch: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
