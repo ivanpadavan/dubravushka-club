@@ -3,30 +3,28 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import TopSlide from "../components/TopSlide";
+import {slidePropTypes} from "./index-page";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ slide, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+      <div>
+        <TopSlide { ...slide }></TopSlide>
+        <section className="section section--gradient">
+          <div className="container">
+            <div className="columns">
+                  <PageContent className="content" content={content} />
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
   )
 }
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  slide: slidePropTypes,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -38,7 +36,7 @@ const AboutPage = ({ data }) => {
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        slide={post.frontmatter.slide}
         content={post.html}
       />
     </Layout>
@@ -56,7 +54,18 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        slide {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          heading
+          subheading
+          imageHeight
+        }
       }
     }
   }
