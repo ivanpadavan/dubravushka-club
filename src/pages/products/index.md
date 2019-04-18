@@ -3,15 +3,12 @@ templateKey: 'product-page'
 path: /products
 slide:
   image: /img/home-jumbotron.jpg
-  heading: Заголовок красив
-  subheading: Подзаголовок вполне сносный
-  imageHeight: 100vh
-heading: Great coffee with a conscience
+  heading: То что мы делаем
+  subheading: мы делаем с душой
+  imageHeight: 420px
+heading: Услуги
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  От подруги
 intro:
   blurbs:
     - image: /img/coffee.png

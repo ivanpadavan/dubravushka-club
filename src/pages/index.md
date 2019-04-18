@@ -2,8 +2,8 @@
 templateKey: index-page
 slide:
   image: /img/home-jumbotron.jpg
-  heading: Заголовок красив
-  subheading: Подзаголовок вполне сносный
+  heading: Дубравушка родная
+  subheading: В жизни приносит успех!
   imageHeight: 100vh
 mainpitch:
   title: Почему мы?
