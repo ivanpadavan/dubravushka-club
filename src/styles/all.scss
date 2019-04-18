@@ -13,6 +13,13 @@ $family-sans-serif: 'Montserrat', sans-serif;
 @import "navbar";
 @import "blog-roll";
 
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .content .taglist {
   list-style: none;
   margin-bottom: 0;
