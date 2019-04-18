@@ -1,5 +1,5 @@
 ---
-templateKey: 'product-page'
+templateKey: 'offer-page'
 path: /products
 slide:
   image: /img/home-jumbotron.jpg

@@ -8,7 +8,7 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import TopSlide from "../components/TopSlide";
 
-export const ProductPageTemplate = ({
+export const OfferPageTemplate = ({
   slide,
   heading,
   description,
@@ -85,7 +85,7 @@ export const ProductPageTemplate = ({
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+OfferPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -138,8 +138,8 @@ OfferPage.propTypes = {
 
 export default OfferPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const offerPageQuery = graphql`
+  query OfferPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         slide {
