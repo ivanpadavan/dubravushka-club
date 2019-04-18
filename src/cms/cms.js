@@ -8,6 +8,6 @@ import NewsPagePreview from './preview-templates/NewsPagePreview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
+CMS.registerPreviewTemplate('offer', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 CMS.registerPreviewTemplate('news', NewsPagePreview)

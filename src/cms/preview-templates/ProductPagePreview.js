@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProductPageTemplate } from '../../templates/offer-page'
+import { OfferPageTemplate } from '../../templates/offer-page'
 
 const ProductPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
@@ -13,7 +13,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
-    <ProductPageTemplate
+    <OfferPageTemplate
       slide={entry.getIn(['data', 'slide'])}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}

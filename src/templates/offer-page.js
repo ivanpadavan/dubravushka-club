@@ -114,7 +114,7 @@ const OfferPage = ({ data }) => {
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <OfferPageTemplate
         slide={frontmatter.slide}
         heading={frontmatter.heading}
         description={frontmatter.description}
