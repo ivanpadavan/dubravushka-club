@@ -10,7 +10,7 @@ export const TopSlide = ({
                                          backgroundImage: `url(${
                                              !!(image && image.childImageSharp) ? image.childImageSharp.fluid.src : image
                                              })`,
-                                         backgroundPosition: `top left`,
+                                         backgroundSize: `cover`,
                                          backgroundAttachment: `fixed`,
                                          height: imageHeight,
                                          paddingTop: '5rem',

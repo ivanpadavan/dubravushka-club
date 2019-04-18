@@ -11,27 +11,45 @@
     fill: transparent;
     height: 4rem;
     transition: all .3s ease-in;
-  }
-
-  .navbar-item {
-    text-transform: uppercase;
-    font-weight: 700;
-
-    .icon {
-      color: $primary
+    &.leaf-left {
+      transform: rotate(-20deg);
+    }
+    &.leaf-right {
+      transform: rotate(20deg);
     }
   }
 
-  .navbar-menu {
-    box-shadow: none !important;
-    background-color: transparent!important;
+  .brand-title {
+    @extend .is-size-5;
+    margin-left: 1rem;
+}
+
+.navbar-item {
+  text-transform: uppercase;
+  font-weight: 700;
+
+  .icon {
+    color: $primary
   }
 }
+
+.navbar-menu {
+  box-shadow: none !important;
+  background-color: transparent!important;
+}
+}
 .on-top:not(.is-active) {
-  @extend .is-dark;
-  background-color: #00000055!important;
-  .navbar-brand svg {
-    stroke: white;
-    height: 5rem;
+@extend .is-dark;
+background-color: #00000055!important;
+.navbar-brand svg {
+  stroke: white;
+  height: 5rem;
+
+  &.leaf-left {
+    transform: rotate(-30deg);
   }
+  &.leaf-right {
+    transform: rotate(30deg);
+  }
+}
 }
