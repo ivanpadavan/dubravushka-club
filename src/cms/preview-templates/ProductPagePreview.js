@@ -14,7 +14,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 
   return (
     <OfferPageTemplate
-      slide={entry.getIn(['data', 'slide'])}
+      slide={entry.getIn(['data', 'slide']).toJS()}
       heading={entry.getIn(['data', 'heading'])}
       description={entry.getIn(['data', 'description'])}
       intro={{ blurbs }}

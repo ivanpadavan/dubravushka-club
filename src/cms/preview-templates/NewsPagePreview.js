@@ -4,7 +4,7 @@ import { NewsPageTemplate } from '../../templates/news-page'
 
 const AboutPagePreview = ({ entry, widgetFor }) => (
   <NewsPageTemplate
-    slide={entry.getIn(['data', 'slide'])}
+    slide={entry.getIn(['data', 'slide']).toJS()}
     content={widgetFor('body')}
   />
 )
