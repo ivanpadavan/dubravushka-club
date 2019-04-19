@@ -2,7 +2,7 @@
 templateKey: 'offer-page'
 path: /products
 slide:
-  image: /img/home-jumbotron.jpg
+  image: /img/dubravushka.png
   heading: То что мы делаем
   subheading: мы делаем с душой
   imageHeight: 420px

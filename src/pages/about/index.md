@@ -2,7 +2,7 @@
 templateKey: 'about-page'
 path: /about
 slide:
-  image: /img/home-jumbotron.jpg
+  image: /img/dubravushka.png
   heading: Итоги деятельности
   subheading: Зеркало души
   imageHeight: 400px

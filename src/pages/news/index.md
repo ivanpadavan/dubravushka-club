@@ -2,7 +2,7 @@
 templateKey: 'news-page'
 path: /about
 slide:
-  image: /img/home-jumbotron.jpg
+  image: /img/dubravushka.png
   heading: Наши новости
   subheading: только хоршоие!
   imageHeight: 300px

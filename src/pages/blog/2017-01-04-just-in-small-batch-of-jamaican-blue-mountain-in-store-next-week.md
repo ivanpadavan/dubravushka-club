@@ -3,7 +3,7 @@ templateKey: 'blog-post'
 title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
 date: 2017-01-04T15:04:10.000Z
 slide:
-  image: /img/home-jumbotron.jpg
+  image: /img/dubravushka.png
   heading: Заголовок красив
   subheading: Подзаголовок вполне сносный
   imageHeight: 100vh

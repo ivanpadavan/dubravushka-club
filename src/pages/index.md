@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 slide:
-  image: /img/home-jumbotron.jpg
+  image: /img/dubravushka.png
   heading: Дубравушка родная
   subheading: В жизни приносит успех!
   imageHeight: 100vh
