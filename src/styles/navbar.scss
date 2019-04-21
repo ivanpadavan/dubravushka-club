@@ -19,9 +19,17 @@
     }
   }
 
+  .burger {
+    height: initial;
+  }
+
   .brand-title {
-    @extend .is-size-5;
+    @extend .is-size-6-touch;
+    @extend .is-size-5-desktop;
+    text-wrap: normal;
     margin-left: 1rem;
+    align-self: center;
+    text-transform: uppercase;
 }
 
 .navbar-item {
